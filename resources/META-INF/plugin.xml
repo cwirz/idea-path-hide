@@ -1,0 +1,24 @@
+<idea-plugin version="2">
+  <id>com.pyango.gmbh</id>
+  <name>Path hide</name>
+  <version>1.0</version>
+  <vendor email="webmaster@pyango.ch" url="http://pyango.ch">Pyango GmbH</vendor>
+
+  <description><![CDATA[
+      This is a very small plugin to remove the project path in the tree view to prevent horizontal scrolling.
+    ]]></description>
+
+  <change-notes><![CDATA[
+      - Add initial classes and overwrite the PsiDirectoryNode to prevent displaying the project or module path
+    ]]>
+  </change-notes>
+
+  <idea-version since-build="141.0"/>
+
+  <depends>com.intellij.modules.lang</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <treeStructureProvider implementation="com.pyango.tree.structure.CustomTreeStructureProvider"/>
+  </extensions>
+
+</idea-plugin>
